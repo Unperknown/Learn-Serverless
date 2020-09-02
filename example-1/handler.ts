@@ -15,8 +15,8 @@ const main = (event: APIGatewayEvent, context: Context, callback: Callback) => {
     Item: {
       id: event.requestContext.identity.cognitoIdentityId,
       uid: uuidv4(),
-      user: "Unperknown",
-      age: 18,
+      user: data.user,
+      age: data.age,
     },
   };
 
@@ -42,7 +42,7 @@ const main = (event: APIGatewayEvent, context: Context, callback: Callback) => {
     const repsonse = {
       statusCode: 200,
       headers: headers,
-      body: JSON.stringify(data),
+      body: JSON.stringify(inputs.Item),
     };
 
     callback(null, repsonse);
