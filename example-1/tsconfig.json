@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "es6",
+    "target": "es2020",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["*"]
+    },
+    "sourceMap": true,
+    "typeRoots": ["/node_modules/@types", "/@types"],
+    "pretty": true,
+    "esModuleInterop": true
+  },
+  "include": ["handler.ts"],
+  "exclude": ["node_modules", "test/**/*"]
+}

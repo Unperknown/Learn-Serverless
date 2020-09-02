@@ -1,0 +1,23 @@
+service: example-1
+
+package:
+  individually: true
+
+plugins:
+  - serverless-bundle
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: ap-southeast-1
+
+functions:
+  hello:
+    handler: handler.main
+    events:
+      - http:
+          path: main
+          method: get
