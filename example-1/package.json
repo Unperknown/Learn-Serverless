@@ -5,7 +5,8 @@
   "main": "handler.js",
   "scripts": {
     "start": "sls offline start",
-    "test": "serverless-bundle test"
+    "test": "serverless-bundle test",
+    "lint": "eslint --fix \"./**/*.ts\" && prettier --config .prettierrc --write \"./**/*.ts\""
   },
   "author": "Unperknown",
   "license": "MIT",
@@ -18,8 +19,12 @@
     "@types/node": "^14.6.2",
     "@types/serverless": "^1.72.6",
     "@types/uuid": "^8.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
     "aws-lambda": "^1.0.6",
     "aws-sdk": "^2.744.0",
+    "eslint": "^7.8.1",
+    "prettier": "^2.1.1",
     "serverless-bundle": "3.0.0",
     "serverless-dotenv-plugin": "^3.0.0",
     "serverless-offline": "^6.7.0",
